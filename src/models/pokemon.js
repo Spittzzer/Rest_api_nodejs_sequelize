@@ -32,6 +32,7 @@ const Pokemon = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
+
         validate: {
           notEmpty: { msg: "no empty name" },
           notNull: { msg: "name is required" },

@@ -41,29 +41,28 @@ const initDb = () => {
       console.log("error", error);
     });
   //create table:::
-  return sequelize.sync().then((_) => {
-    //sync({ force: true }) for dev only
-    pokemons.map((pokemon) => {
-      Pokemon.create({
-        name: pokemon.name,
-        hp: pokemon.hp,
-        cp: pokemon.cp,
-        picture: pokemon.picture,
-        types: pokemon.types,
-      });
+  return sequelize.sync({ force: false }).then((_) => {
+    // sync({ force: true }) for dev only
+    // pokemons.map((pokemon) => {
+    //   Pokemon.create({
+    //     name: pokemon.name,
+    //     hp: pokemon.hp,
+    //     cp: pokemon.cp,
+    //     picture: pokemon.picture,
+    //     types: pokemon.types,
+    //   })
+    //   .then((pokemon) => console.log(pokemon.toJSON()));
+    // });
 
-      // .then((pokemon) => console.log(pokemon.toJSON()));
-    });
-
-    bcrypt
-      .hash("ha123", 10)
-      .then((hash) =>
-        User.create({
-          username: "billy",
-          password: hash,
-        })
-      )
-      .then((user) => console.log(user.toJSON()));
+    // bcrypt
+    //   .hash("ha123", 10)
+    //   .then((hash) =>
+    //     User.create({
+    //       username: "billy",
+    //       password: hash,
+    //     })
+    //   )
+    // .then((user) => console.log(user.toJSON()));
     console.log("database initialiazed successfully !");
   });
 };

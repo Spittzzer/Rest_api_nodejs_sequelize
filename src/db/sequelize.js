@@ -15,6 +15,7 @@ if (process.env.NODE_ENV === "production") {
       dialect: "mysql",
 
       logging: true,
+      port: 3306,
     }
   );
 } else {

@@ -9,10 +9,11 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import privateKey from "./src/auth/privateKey.js";
 import auth from "./src/auth/auth.js";
+import corse from "cors":
 
 const app = express();
 const port = process.env.PORT || 3000;
-app.use(bodyParser.json());
+app.use(bodyParser.json()).use(cors());
 
 sequelize.initDb();
 

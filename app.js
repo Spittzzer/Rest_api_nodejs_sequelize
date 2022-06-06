@@ -129,7 +129,7 @@ app.delete("/api/pokemons/:id", auth, (req, res) => {
     });
 });
 
-app.get("/", (req, res) => res.send("Sup y'all it's meee"));
+app.get("/", (req, res) => res.send("Sup y'all it's meee billyyy"));
 
 //login routes
 app.post("/api/login", (req, res) => {

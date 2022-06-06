@@ -167,7 +167,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(port, () =>
-  console.log(
-    `Notre application Node est démarrée sur : http://localhost:${port}`
-  )
+  console.log(`node application running on: http://localhost:${port}`)
 );

@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === "production") {
     "y62ttj668y1b8qnw",
     "cw67ybamlxupjqqq",
     {
-      host: "	clwxydcjair55xn0.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
+      host: "clwxydcjair55xn0.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
       dialect: "mysql",
 
       logging: true,

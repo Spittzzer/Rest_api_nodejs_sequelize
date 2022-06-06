@@ -9,7 +9,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import privateKey from "./src/auth/privateKey.js";
 import auth from "./src/auth/auth.js";
-import corse from "cors":
+import cors from "cors":
 
 const app = express();
 const port = process.env.PORT || 3000;
